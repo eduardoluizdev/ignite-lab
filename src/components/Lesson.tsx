@@ -29,9 +29,10 @@ export function Lesson({ title, slug, type, avaliableAt }: LessonProps) {
 
       <div
         className={classNames(
-          "rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500",
+          "rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500 relative",
           {
-            "bg-green-500": isActiveLesson,
+            "bg-green-500  before:content-[' '] before:absolute before:w-4 before:h-4 before:bg-green-500 before:z-[100] before:rotate-45 before:left-0 before:top-[50%] before:translate-y-[-10px] before:translate-x-[-50%]":
+              isActiveLesson,
           }
         )}
       >
